@@ -1,29 +1,21 @@
-# 发布说明
+# 鍙戝竷璇存槑
 
-本仓库已经配置 Quartz 5 和 GitHub Pages 自动发布。
+鏈粨搴撳凡缁忛厤缃?Quartz 5 鍜?GitHub Pages 鑷姩鍙戝竷銆?
+## 棣栨鍚敤
 
-## 首次启用
+1. 鎵撳紑 GitHub 浠撳簱鐨?**Settings**銆?2. 鍦ㄤ晶杈规爮閫夋嫨 **Pages**銆?3. 灏?**Source** 璁剧疆涓?**GitHub Actions**銆?4. 鎵撳紑 **Actions**锛岀瓑寰?鈥淒eploy Quartz site to GitHub Pages鈥?瀹屾垚銆?5. 璁块棶 <https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/>銆?
+## 鏃ュ父鏇存柊
 
-1. 打开 GitHub 仓库的 **Settings**。
-2. 在侧边栏选择 **Pages**。
-3. 将 **Source** 设置为 **GitHub Actions**。
-4. 打开 **Actions**，等待 “Deploy Quartz site to GitHub Pages” 完成。
-5. 访问 <https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/>。
-
-## 日常更新
-
-只需编辑 `content` 目录中的 Markdown 文件并推送到 `main`。GitHub Actions 会自动重新构建和发布网站。
-
-## 本地检查
-
-提交前运行：
+鍙渶缂栬緫 `content` 鐩綍涓殑 Markdown 鏂囦欢骞舵帹閫佸埌 `main`銆侴itHub Actions 浼氳嚜鍔ㄩ噸鏂版瀯寤哄拰鍙戝竷缃戠珯銆?
+## 鏈湴妫€鏌?
+鎻愪氦鍓嶈繍琛岋細
 
 ```shell
 python scripts/check_markdown_links.py
 ```
 
-如果需要重新统一标题、公式块、代码围栏和空行：
-
+濡傛灉闇€瑕侀噸鏂扮粺涓€鏍囬銆佸叕寮忓潡銆佷唬鐮佸洿鏍忓拰绌鸿锛?
 ```shell
 python scripts/normalize_markdown.py
 ```
+

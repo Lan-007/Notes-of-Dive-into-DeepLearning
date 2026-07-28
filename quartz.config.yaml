@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 动手学深度学习笔记
+  pageTitle: 首页
   pageTitleSuffix: " · PyTorch 学习笔记"
   enableSPA: true
   enablePopovers: true
@@ -15,20 +15,20 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Noto Sans SC
-      body: Noto Sans SC
+      header: Noto Serif SC
+      body: Noto Serif SC
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#315f86"
-        tertiary: "#244b6b"
-        highlight: rgba(49, 95, 134, 0.10)
-        textHighlight: "#fff23688"
+        light: "#fffff8"
+        lightgray: "#e7e5dc"
+        gray: "#aaa89f"
+        darkgray: "#4a4944"
+        dark: "#262521"
+        secondary: "#315f7d"
+        tertiary: "#24547a"
+        highlight: rgba(49, 95, 125, 0.10)
+        textHighlight: "#f2e6a788"
       darkMode:
         light: "#161618"
         lightgray: "#393639"
@@ -153,7 +153,7 @@ plugins:
       position: right
       priority: 50
   - source: "@quartz-community/article-title"
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 10

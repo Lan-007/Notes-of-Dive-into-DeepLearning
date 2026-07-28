@@ -45,6 +45,7 @@ jobs:
           cp -R notes/content quartz-site/content
           cp notes/quartz.config.yaml quartz-site/quartz.config.yaml
           cp notes/quartz/styles/custom.scss quartz-site/quartz/styles/custom.scss
+          cp notes/quartz/components/Head.tsx quartz-site/quartz/components/Head.tsx
 
       - name: Install dependencies
         working-directory: quartz-site

@@ -44,6 +44,7 @@ jobs:
           rm -rf quartz-site/content
           cp -R notes/content quartz-site/content
           cp notes/quartz.config.yaml quartz-site/quartz.config.yaml
+          cp notes/quartz/styles/custom.scss quartz-site/quartz/styles/custom.scss
 
       - name: Install dependencies
         working-directory: quartz-site

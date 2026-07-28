@@ -13,10 +13,14 @@ export default (() => {
     ctx,
   }: QuartzComponentProps) => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
+    const slugSegments = fileData.slug?.split("/") ?? []
+    const lastSegment = slugSegments.at(-1)
+    const fallbackSegment =
+      lastSegment === "index" ? slugSegments.at(-2) : lastSegment
     const slugTitle =
       fileData.slug === "index"
         ? cfg.pageTitle
-        : (fileData.slug?.split("/").at(-1) ?? cfg.pageTitle)
+        : (fallbackSegment?.replaceAll("-", " ") ?? cfg.pageTitle)
     const title = (fileData.frontmatter?.title ?? slugTitle) + titleSuffix
     const description =
       fileData.frontmatter?.socialDescription ??

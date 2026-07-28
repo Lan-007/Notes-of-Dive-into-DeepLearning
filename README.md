@@ -1,157 +1,209 @@
-# 鍔ㄦ墜瀛︽繁搴﹀涔犵瑪璁?
-[![鍦ㄧ嚎闃呰](https://img.shields.io/badge/鍦ㄧ嚎闃呰-Quartz-2563eb?style=for-the-badge&logo=github)](https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)
-[![Markdown 閾炬帴妫€鏌(https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml/badge.svg)](https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml)
+# 动手学深度学习笔记
 
-鍩轰簬 PyTorch 鐨勩€婂姩鎵嬪娣卞害瀛︿範銆嬪涔犵瑪璁帮紝娑电洊鍩虹鐭ヨ瘑銆佺缁忕綉缁滆缁冦€佹敞鎰忓姏鏈哄埗銆乀ransformer 涓?NLP 棰勮缁冨簲鐢ㄣ€?
+[![在线阅读](https://img.shields.io/badge/在线阅读-Quartz-2563eb?style=for-the-badge&logo=github)](https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)
+[![Markdown 链接检查](https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml/badge.svg)](https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml)
+
+基于 PyTorch 的《动手学深度学习》学习笔记，涵盖基础知识、神经网络训练、注意力机制、Transformer 与 NLP 预训练应用。
+
 > [!TIP]
-> 鎺ㄨ崘璁块棶 **[鍦ㄧ嚎闃呰鐗圿(https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)**锛屽彲浣跨敤鍏ㄦ枃鎼滅储銆佺珷鑺傜洰褰曘€佸叕寮忔覆鏌撳拰娣辫壊妯″紡銆?
-缃戠珯鐢?Quartz 鍜?GitHub Pages 鑷姩鏋勫缓銆傞娆″惎鐢ㄦ椂锛岃鍦ㄤ粨搴撶殑 **Settings 鈫?Pages 鈫?Source** 涓€夋嫨 **GitHub Actions**锛涙鍚庢瘡娆℃帹閫佸埌 `main` 閮戒細鑷姩鏇存柊銆?
-## 瀛︿範璺嚎
+> 推荐访问 **[在线阅读版](https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)**，可使用全文搜索、章节目录、公式渲染和深色模式。
 
-璺嚎锛歅yTorch 鍩虹 鈫?绁炵粡缃戠粶璁粌 鈫?娣卞害瀛︿範 鈫?Transformer 鈫?NLP 棰勮缁?鈫?NLP 搴旂敤
+网站由 Quartz 和 GitHub Pages 自动构建。首次启用时，请在仓库的 **Settings → Pages → Source** 中选择 **GitHub Actions**；此后每次推送到 `main` 都会自动更新。
 
-### 绗?1 绔狅細寮曡█
+## 学习路线
 
- 浼犵粺鏈哄櫒瀛︿範銆佹繁搴﹀涔犮€佹暟鎹€佹ā鍨嬨€佹崯澶卞嚱鏁般€佷紭鍖栫畻娉曘€佸洖褰掋€佸垎绫汇€佺洃鐫ｅ涔犮€?
-### 绗?2 绔狅細棰勫鐭ヨ瘑
+路线：PyTorch 基础 → 神经网络训练 → 深度学习 → Transformer → NLP 预训练 → NLP 应用
 
-- [2.1 鏁版嵁鎿嶄綔](<content/2. 棰勫鐭ヨ瘑/2.1鏁版嵁鎿嶄綔.md>)
+### 第 1 章：引言
 
-  鍏抽敭璇嶏細Tensor銆乻hape銆乶umel銆乺eshape銆佸箍鎾€佺储寮曘€佸垏鐗囥€佸唴瀛樸€?
-- [2.2 鏁版嵁棰勫鐞哴(<content/2. 棰勫鐭ヨ瘑/2.2 鏁版嵁棰勫鐞?md>)
+ 传统机器学习、深度学习、数据、模型、损失函数、优化算法、回归、分类、监督学习。
 
-  鍏抽敭璇嶏細CSV銆乸andas銆丏ataFrame銆佺己澶卞€笺€佸潎鍊煎～鍏呫€佺嫭鐑紪鐮併€?
-- [2.3 绾挎€т唬鏁癩(<content/2. 棰勫鐭ヨ瘑/2.3 绾挎€т唬鏁?md>)
+### 第 2 章：预备知识
 
-  鍏抽敭璇嶏細鐐圭Н銆佺煩闃碘€斿悜閲忎箻娉曘€佺煩闃典箻娉曘€佽寖鏁般€佺淮搴︺€?
-- [2.4 寰Н鍒嗕笌鑷姩寰垎](<content/2. 棰勫鐭ヨ瘑/2.4 寰Н鍒嗕笌鑷姩寰垎.md>)
+- [2.1 数据操作](<content/2. 预备知识/2.1数据操作.md>)
 
-  鍏抽敭璇嶏細姊害銆佽嚜鍔ㄦ眰瀵笺€乣requires_grad`銆乣backward`銆乣grad`銆佽绠楀浘鍒嗙銆?
-- [2.5 姒傜巼璁篯(<content/2. 棰勫鐭ヨ瘑/2.5 姒傜巼璁?md>)
+  关键词：Tensor、shape、numel、reshape、广播、索引、切片、内存。
 
-  鍏抽敭璇嶏細澶ф暟瀹氬緥銆佽礉鍙舵柉瀹氱悊銆?
-### 绗?3 绔狅細绾挎€х缁忕綉缁?
-#### 3.1 绾挎€у洖褰?
-- [3.1.1 绾挎€у洖褰抅(<content/3.1 绾挎€х缁忕綉缁?1. 绾挎€у洖褰?md>)
+- [2.2 数据预处理](<content/2. 预备知识/2.2 数据预处理.md>)
 
-  鍏抽敭璇嶏細鍥炲綊妯″瀷銆佸潎鏂硅宸€佹搴︿笅闄嶃€佹壒閲忋€佽缁冩祦绋嬨€?
-- [3.1.2 浠庨浂寮€濮嬪疄鐜癩(<content/3.1 绾挎€х缁忕綉缁?2. 浠庨浂寮€濮嬪疄鐜?md>)
+  关键词：CSV、pandas、DataFrame、缺失值、均值填充、独热编码。
 
-  鍏抽敭璇嶏細鍚堟垚鏁版嵁銆丏ataLoader銆佹ā鍨嬪嚱鏁般€佹崯澶卞嚱鏁般€丼GD銆佹墜鍐欒缁冨惊鐜€?
-- [3.1.3 绠€娲佸疄鐜癩(<content/3.1 绾挎€х缁忕綉缁?3. 绠€娲佸疄鐜?md>)
+- [2.3 线性代数](<content/2. 预备知识/2.3 线性代数.md>)
 
-  鍏抽敭璇嶏細`nn.Sequential`銆乣nn.Linear`銆乣MSELoss`銆佷紭鍖栧櫒銆佹爣鍑嗚缁冩祦绋嬨€?
-#### 3.2 Softmax 鍥炲綊
+  关键词：点积、矩阵—向量乘法、矩阵乘法、范数、维度。
 
-- [3.2.1 Softmax 鍥炲綊](<content/3.2 softmax鍥炲綊/1. softmax鍥炲綊.md>)
+- [2.4 微积分与自动微分](<content/2. 预备知识/2.4 微积分与自动微分.md>)
 
-  鍏抽敭璇嶏細澶氬垎绫汇€佺被鍒垎鏁般€佹鐜囥€乻oftmax銆佷氦鍙夌喌銆佺嫭鐑紪鐮併€?
-- [3.2.2 浠庨浂寮€濮嬪疄鐜癩(<content/3.2 softmax鍥炲綊/2. 浠庨浂寮€濮嬪疄鐜?md>)
+  关键词：梯度、自动求导、`requires_grad`、`backward`、`grad`、计算图分离。
 
-  鍏抽敭璇嶏細Fashion-MNIST銆佸浘鍍忓紶閲忋€乻oftmax銆佷氦鍙夌喌銆佸垎绫诲噯纭巼銆佽缁冨嚱鏁般€?
-- [3.2.3 绠€娲佸疄鐜癩(<content/3.2 softmax鍥炲綊/3. 绠€娲佸疄鐜?md>)
+- [2.5 概率论](<content/2. 预备知识/2.5 概率论.md>)
 
-  鍏抽敭璇嶏細`Flatten`銆乣Linear`銆乣CrossEntropyLoss`銆丼GD銆佸垎绫昏缁冦€?
-### 绗?4 绔狅細澶氬眰鎰熺煡鏈?
-- [4.1 澶氬眰鎰熺煡鏈篯(<content/4. 澶氬眰鎰熺煡鏈?1. 澶氬眰鎰熺煡鏈?md>)
+  关键词：大数定律、贝叶斯定理。
 
-  鍏抽敭璇嶏細闅愯棌灞傘€侀潪绾挎€с€丷eLU銆丮LP銆侀€氱敤杩戜技銆?
-- [4.2 浠庨浂瀹炵幇](<content/4. 澶氬眰鎰熺煡鏈?2. 浠庨浂瀹炵幇.md>)
+### 第 3 章：线性神经网络
 
-  鍏抽敭璇嶏細鎵嬪啓鍙傛暟銆丷eLU銆佸墠鍚戜紶鎾€佷氦鍙夌喌銆丗ashion-MNIST銆?
-- [4.3 绠€娲佸疄鐜癩(<content/4. 澶氬眰鎰熺煡鏈?3. 绠€娲佸疄鐜?md>)
+#### 3.1 线性回归
 
-  鍏抽敭璇嶏細`nn.Sequential`銆佸弬鏁板垵濮嬪寲銆丮LP 璁粌銆?
-- [4.4 妯″瀷閫夋嫨銆佹瑺鎷熷悎鍜岃繃鎷熷悎](<content/4. 澶氬眰鎰熺煡鏈?4. 妯″瀷閫夋嫨銆佹瑺鎷熷悎鍜岃繃鎷熷悎.md>)
+- [3.1.1 线性回归](<content/3.1 线性神经网络/1. 线性回归.md>)
 
-  鍏抽敭璇嶏細璁粌璇樊銆佹硾鍖栬宸€侀獙璇侀泦銆佹祴璇曢泦銆佹ā鍨嬪鏉傚害銆佽秴鍙傛暟銆?
-- [4.5 鏉冮噸琛板噺](<content/4. 澶氬眰鎰熺煡鏈?5. 鏉冮噸琛板噺.md>)
+  关键词：回归模型、均方误差、梯度下降、批量、训练流程。
 
-  鍏抽敭璇嶏細L2 姝ｅ垯鍖栥€乣weight_decay`銆佸弬鏁版儵缃氥€佽繃鎷熷悎銆?
-- [4.6 Dropout](<content/4. 澶氬眰鎰熺煡鏈?6. 鏆傞€€娉曪紙dropout锛?md>)
+- [3.1.2 从零开始实现](<content/3.1 线性神经网络/2. 从零开始实现.md>)
 
-  鍏抽敭璇嶏細闅忔満澶辨椿銆佷繚鐣欐鐜囥€佽缁冩ā寮忋€佹帹鐞嗘ā寮忋€佹鍒欏寲銆?
-- [4.7 鍓嶅悜浼犳挱銆佸弽鍚戜紶鎾拰璁＄畻鍥綸(<content/4. 澶氬眰鎰熺煡鏈?7.鍓嶅悜浼犳挱銆佸弽鍚戜紶鎾拰璁＄畻鍥?md>)
+  关键词：合成数据、DataLoader、模型函数、损失函数、SGD、手写训练循环。
 
-  鍏抽敭璇嶏細forward銆乴oss銆乥ackward銆佹搴︺€乷ptimizer銆佽绠楀浘銆?
-- [4.8 鏁板€肩ǔ瀹氭€у拰妯″瀷鍒濆鍖朷(<content/4. 澶氬眰鎰熺煡鏈?8. 鏁板€肩ǔ瀹氭€у拰妯″瀷鍒濆鍖?md>)
+- [3.1.3 简洁实现](<content/3.1 线性神经网络/3. 简洁实现.md>)
 
-  鍏抽敭璇嶏細姊害娑堝け銆佹搴︾垎鐐搞€乆avier 鍒濆鍖栥€佹暟鍊肩ǔ瀹氭€с€丯aN銆?
-- [4.9 鐜鍜屽垎甯冨亸绉籡(<content/4. 澶氬眰鎰熺煡鏈?9. 鐜鍜屽垎甯冨亸绉?md>)
+  关键词：`nn.Sequential`、`nn.Linear`、`MSELoss`、优化器、标准训练流程。
 
-  鍏抽敭璇嶏細鍗忓彉閲忓亸绉汇€佹爣绛惧亸绉汇€佹蹇靛亸绉汇€佺嚎涓婃晥鏋溿€佹暟鎹垎甯冦€?
-- [4.10 Kaggle 鎴夸环棰勬祴](<content/4. 澶氬眰鎰熺煡鏈?10. 瀹炴垬Kaggle姣旇禌锛氶娴嬫埧浠?md>)
+#### 3.2 Softmax 回归
 
-  鍏抽敭璇嶏細琛ㄦ牸鏁版嵁銆佹爣鍑嗗寲銆佺己澶卞€笺€並 鎶樹氦鍙夐獙璇併€佽缁冦€侀娴嬨€乻ubmission銆?
-### 绗?5 绔狅細娣卞害瀛︿範璁＄畻
+- [3.2.1 Softmax 回归](<content/3.2 softmax回归/1. softmax回归.md>)
 
-- [5.1 灞傚拰鍧梋(<content/5. 娣卞害瀛︿範璁＄畻/1. 灞傚拰鍧?md>)
+  关键词：多分类、类别分数、概率、softmax、交叉熵、独热编码。
 
-  鍏抽敭璇嶏細`nn.Module`銆佽嚜瀹氫箟妯″瀷銆佸眰銆佸潡銆乣forward`銆佹ā鍨嬬粍鍚堛€?
-- [5.2 鍙傛暟绠＄悊](<content/5. 娣卞害瀛︿範璁＄畻/2.鍙傛暟绠＄悊.md>)
+- [3.2.2 从零开始实现](<content/3.2 softmax回归/2. 从零开始实现.md>)
 
-  鍏抽敭璇嶏細`parameters`銆乣named_parameters`銆佸弬鏁拌闂€佸弬鏁板垵濮嬪寲銆佸叡浜弬鏁般€?
-- [5.3 寤跺悗鍒濆鍖朷(<content/5. 娣卞害瀛︿範璁＄畻/3. 寤跺悗鍒濆鍖?md>)
+  关键词：Fashion-MNIST、图像张量、softmax、交叉熵、分类准确率、训练函数。
 
-  鍏抽敭璇嶏細`LazyLinear`銆佽緭鍏ョ淮搴︽帹鏂€侀娆″墠鍚戜紶鎾€佸弬鏁板垵濮嬪寲銆?
-- [5.4 璇诲啓鏂囦欢涓庢ā鍨嬪弬鏁癩(<content/5. 娣卞害瀛︿範璁＄畻/4. 璇诲啓鏂囦欢锛堟ā鍨嬪弬鏁帮級.md>)
+- [3.2.3 简洁实现](<content/3.2 softmax回归/3. 简洁实现.md>)
 
-  鍏抽敭璇嶏細`torch.save`銆乣torch.load`銆乣state_dict`銆佹ā鍨嬩繚瀛樸€乧heckpoint銆佹仮澶嶈缁冦€?
-- [5.5 GPU](<content/5. 娣卞害瀛︿範璁＄畻/5. GPU.md>)
+  关键词：`Flatten`、`Linear`、`CrossEntropyLoss`、SGD、分类训练。
 
-  鍏抽敭璇嶏細device銆丆UDA銆乣.to(device)`銆佸紶閲忚縼绉汇€佹ā鍨嬭縼绉汇€佸 GPU 鍩虹銆?
-### 绗?10 绔狅細娉ㄦ剰鍔涙満鍒?
-- [10.1 娉ㄦ剰鍔涙彁绀篯(<content/10. 娉ㄦ剰鍔涙満鍒?1. 娉ㄦ剰鍔涙彁绀?md>)
+### 第 4 章：多层感知机
 
-  鍏抽敭璇嶏細Query銆並ey銆乂alue銆佹敞鎰忓姏鏉冮噸銆佸姞鏉冩眰鍜屻€?
-- [10.2 娉ㄦ剰鍔涙眹鑱氫笌鏍稿洖褰抅(<content/10. 娉ㄦ剰鍔涙満鍒?2. 娉ㄦ剰鍔涙眹鑱氾細Nadaraya-Watson 鏍稿洖褰?md>)
+- [4.1 多层感知机](<content/4. 多层感知机/1. 多层感知机.md>)
 
-  鍏抽敭璇嶏細Nadaraya-Watson銆佹牳鍑芥暟銆佺浉浼煎害銆侀潪鍙傛暟娉ㄦ剰鍔涖€佸甫鍙傛暟娉ㄦ剰鍔涖€?
-- [10.3 娉ㄦ剰鍔涜瘎鍒嗗嚱鏁癩(<content/10. 娉ㄦ剰鍔涙満鍒?3. 娉ㄦ剰鍔涜瘎鍒嗗嚱鏁?md>)
+  关键词：隐藏层、非线性、ReLU、MLP、通用近似。
 
-  鍏抽敭璇嶏細masked softmax銆佸姞鎬ф敞鎰忓姏銆佺缉鏀剧偣绉敞鎰忓姏銆佹湁鏁堥暱搴︺€佹壒閲忕煩闃典箻娉曘€?
-- [10.4 Bahdanau 娉ㄦ剰鍔沒(<content/10. 娉ㄦ剰鍔涙満鍒?4. Bahdanau 娉ㄦ剰鍔?md>)
+- [4.2 从零实现](<content/4. 多层感知机/2. 从零实现.md>)
 
-  鍏抽敭璇嶏細Encoder鈥擠ecoder銆佷笂涓嬫枃鍚戦噺銆佽В鐮佸櫒鏌ヨ銆佺紪鐮佸櫒闅愯棌鐘舵€併€?
-- [10.5 澶氬ご娉ㄦ剰鍔沒(<content/10. 娉ㄦ剰鍔涙満鍒?5. 澶氬ご娉ㄦ剰鍔?md>)
+  关键词：手写参数、ReLU、前向传播、交叉熵、Fashion-MNIST。
 
-  鍏抽敭璇嶏細澶氫釜 head銆佺嚎鎬ф姇褰便€佺淮搴﹀彉鎹€佸苟琛屾敞鎰忓姏銆佹嫾鎺ャ€?
-- [10.6 鑷敞鎰忓姏鍜屼綅缃紪鐮乚(<content/10. 娉ㄦ剰鍔涙満鍒?6. 鑷敞鎰忓姏鍜屼綅缃紪鐮?md>)
+- [4.3 简洁实现](<content/4. 多层感知机/3. 简洁实现.md>)
 
-  鍏抽敭璇嶏細self-attention銆丵KV 鍚屾簮銆佽绠楀鏉傚害銆佹寮︿綅缃紪鐮併€佸簭鍒楅『搴忋€?
-- [10.7 Transformer](<content/10. 娉ㄦ剰鍔涙満鍒?7. Transformer.md>)
+  关键词：`nn.Sequential`、参数初始化、MLP 训练。
 
-  鍏抽敭璇嶏細Encoder銆丏ecoder銆丗FN銆丄ddNorm銆佹畫宸繛鎺ャ€丩ayerNorm銆佸洜鏋滄帺鐮併€佽缁冦€侀娴嬨€丅LEU銆?
-### 绗?14 绔狅細NLP 棰勮缁?
-- [14.1 璇嶅祵鍏(<content/14. NLP棰勮缁?1. 璇嶅祵鍏?md>)
+- [4.4 模型选择、欠拟合和过拟合](<content/4. 多层感知机/4. 模型选择、欠拟合和过拟合.md>)
 
-  鍏抽敭璇嶏細one-hot銆乄ord2Vec銆丆BOW銆丼kip-gram銆侀潤鎬佽瘝鍚戦噺銆?
-- [14.2 杩戜技璁粌](<content/14. NLP棰勮缁?2. 杩戜技璁粌.md>)
+  关键词：训练误差、泛化误差、验证集、测试集、模型复杂度、超参数。
 
-  鍏抽敭璇嶏細璐熼噰鏍枫€佸眰搴?softmax銆佽绠楀鏉傚害銆佹璐熸牱鏈€?
-- [14.3 璇嶅祵鍏ユ暟鎹泦](<content/14. NLP棰勮缁?3. 鐢ㄤ簬棰勮缁冭瘝宓屽叆鐨勬暟鎹泦.md>)
+- [4.5 权重衰减](<content/4. 多层感知机/5. 权重衰减.md>)
 
-  鍏抽敭璇嶏細PTB銆佽瘝琛ㄣ€佷笅閲囨牱銆佷腑蹇冭瘝銆佷笂涓嬫枃璇嶃€佽礋閲囨牱銆乥atch銆?
-- [14.4 棰勮缁?Word2Vec](<content/14. NLP棰勮缁?4. 棰勮缁僿ord2vec.md>)
+  关键词：L2 正则化、`weight_decay`、参数惩罚、过拟合。
 
-  鍏抽敭璇嶏細Embedding銆丼kip-gram銆佽礋閲囨牱鎹熷け銆佹帺鐮併€佽缁冦€佺浉浼艰瘝銆?
-- [14.5 GloVe](<content/14. NLP棰勮缁?5. 鍏ㄥ眬鍚戦噺鐨勮瘝宓屽叆锛圙loVe锛?md>)
+- [4.6 Dropout](<content/4. 多层感知机/6. 暂退法（dropout）.md>)
 
-  鍏抽敭璇嶏細鍏辩幇鐭╅樀銆佸叏灞€缁熻銆佸姞鏉冩渶灏忎簩涔樸€佽瘝鍚戦噺銆?
-- [14.6 瀛愯瘝宓屽叆](<content/14. NLP棰勮缁?6. 瀛愯瘝宓屽叆.md>)
+  关键词：随机失活、保留概率、训练模式、推理模式、正则化。
 
-  鍏抽敭璇嶏細fastText銆佸瓧绗?n-gram銆丅yte Pair Encoding銆丅PE銆佹湭鐧诲綍璇嶃€?
-- [14.7 璇嶇浉浼兼€у拰绫绘瘮](<content/14. NLP棰勮缁?7. 璇嶇殑鐩镐技鎬у拰绫绘瘮浠诲姟.md>)
+- [4.7 前向传播、反向传播和计算图](<content/4. 多层感知机/7.前向传播、反向传播和计算图.md>)
 
-  鍏抽敭璇嶏細浣欏鸡鐩镐技搴︺€並NN銆佽繎涔夎瘝銆佸悜閲忕被姣斻€佽瘝鍚戦噺璇勪环銆?
-- [14.8 BERT](<content/14. NLP棰勮缁?8. 鏉ヨ嚜Transformers鐨勫弻鍚戠紪鐮佸櫒琛ㄧず锛圔ERT锛?md>)
+  关键词：forward、loss、backward、梯度、optimizer、计算图。
 
-  鍏抽敭璇嶏細涓婁笅鏂囪〃绀恒€乀ransformer Encoder銆乼oken/segment/position embedding銆丮LM銆丯SP銆丅ERTModel銆?
-- [14.9鈥?4.10 BERT 鏁版嵁涓庨璁粌](<content/14. NLP棰勮缁?9. 棰勮缁傿ERT.md>)
+- [4.8 数值稳定性和模型初始化](<content/4. 多层感知机/8. 数值稳定性和模型初始化.md>)
 
-  鍏抽敭璇嶏細WikiText-2銆丮LM 鏁版嵁銆丯SP 鏁版嵁銆佹湁鏁堥暱搴︺€侀娴嬩綅缃€佹崯澶卞嚱鏁般€佸皬鍨?BERT銆佽缁冦€佸彞瀛愮紪鐮併€?
-### 绗?15 绔狅細NLP 搴旂敤
+  关键词：梯度消失、梯度爆炸、Xavier 初始化、数值稳定性、NaN。
 
-- [15.1鈥?5.3 鎯呮劅鍒嗘瀽](<content/15. NLP寰皟/1. 鎯呮劅鍒嗘瀽.md>)
+- [4.9 环境和分布偏移](<content/4. 多层感知机/9. 环境和分布偏移.md>)
 
-  鍏抽敭璇嶏細IMDb銆乼okenize銆佽瘝琛ㄣ€佹埅鏂€乸adding銆丏ataLoader銆丟loVe銆丅iLSTM銆乀extCNN銆佷簩鍒嗙被銆佽縼绉诲涔犮€?
+  关键词：协变量偏移、标签偏移、概念偏移、线上效果、数据分布。
+
+- [4.10 Kaggle 房价预测](<content/4. 多层感知机/10. 实战Kaggle比赛：预测房价.md>)
+
+  关键词：表格数据、标准化、缺失值、K 折交叉验证、训练、预测、submission。
+
+### 第 5 章：深度学习计算
+
+- [5.1 层和块](<content/5. 深度学习计算/1. 层和块.md>)
+
+  关键词：`nn.Module`、自定义模型、层、块、`forward`、模型组合。
+
+- [5.2 参数管理](<content/5. 深度学习计算/2.参数管理.md>)
+
+  关键词：`parameters`、`named_parameters`、参数访问、参数初始化、共享参数。
+
+- [5.3 延后初始化](<content/5. 深度学习计算/3. 延后初始化.md>)
+
+  关键词：`LazyLinear`、输入维度推断、首次前向传播、参数初始化。
+
+- [5.4 读写文件与模型参数](<content/5. 深度学习计算/4. 读写文件（模型参数）.md>)
+
+  关键词：`torch.save`、`torch.load`、`state_dict`、模型保存、checkpoint、恢复训练。
+
+- [5.5 GPU](<content/5. 深度学习计算/5. GPU.md>)
+
+  关键词：device、CUDA、`.to(device)`、张量迁移、模型迁移、多 GPU 基础。
+
+### 第 10 章：注意力机制
+
+- [10.1 注意力提示](<content/10. 注意力机制/1. 注意力提示.md>)
+
+  关键词：Query、Key、Value、注意力权重、加权求和。
+
+- [10.2 注意力汇聚与核回归](<content/10. 注意力机制/2. 注意力汇聚：Nadaraya-Watson 核回归.md>)
+
+  关键词：Nadaraya-Watson、核函数、相似度、非参数注意力、带参数注意力。
+
+- [10.3 注意力评分函数](<content/10. 注意力机制/3. 注意力评分函数.md>)
+
+  关键词：masked softmax、加性注意力、缩放点积注意力、有效长度、批量矩阵乘法。
+
+- [10.4 Bahdanau 注意力](<content/10. 注意力机制/4. Bahdanau 注意力.md>)
+
+  关键词：Encoder—Decoder、上下文向量、解码器查询、编码器隐藏状态。
+
+- [10.5 多头注意力](<content/10. 注意力机制/5. 多头注意力.md>)
+
+  关键词：多个 head、线性投影、维度变换、并行注意力、拼接。
+
+- [10.6 自注意力和位置编码](<content/10. 注意力机制/6. 自注意力和位置编码.md>)
+
+  关键词：self-attention、QKV 同源、计算复杂度、正弦位置编码、序列顺序。
+
+- [10.7 Transformer](<content/10. 注意力机制/7. Transformer.md>)
+
+  关键词：Encoder、Decoder、FFN、AddNorm、残差连接、LayerNorm、因果掩码、训练、预测、BLEU。
+
+### 第 14 章：NLP 预训练
+
+- [14.1 词嵌入](<content/14. NLP预训练/1. 词嵌入.md>)
+
+  关键词：one-hot、Word2Vec、CBOW、Skip-gram、静态词向量。
+
+- [14.2 近似训练](<content/14. NLP预训练/2. 近似训练.md>)
+
+  关键词：负采样、层序 softmax、计算复杂度、正负样本。
+
+- [14.3 词嵌入数据集](<content/14. NLP预训练/3. 用于预训练词嵌入的数据集.md>)
+
+  关键词：PTB、词表、下采样、中心词、上下文词、负采样、batch。
+
+- [14.4 预训练 Word2Vec](<content/14. NLP预训练/4. 预训练word2vec.md>)
+
+  关键词：Embedding、Skip-gram、负采样损失、掩码、训练、相似词。
+
+- [14.5 GloVe](<content/14. NLP预训练/5. 全局向量的词嵌入（GloVe）.md>)
+
+  关键词：共现矩阵、全局统计、加权最小二乘、词向量。
+
+- [14.6 子词嵌入](<content/14. NLP预训练/6. 子词嵌入.md>)
+
+  关键词：fastText、字符 n-gram、Byte Pair Encoding、BPE、未登录词。
+
+- [14.7 词相似性和类比](<content/14. NLP预训练/7. 词的相似性和类比任务.md>)
+
+  关键词：余弦相似度、KNN、近义词、向量类比、词向量评价。
+
+- [14.8 BERT](<content/14. NLP预训练/8. 来自Transformers的双向编码器表示（BERT）.md>)
+
+  关键词：上下文表示、Transformer Encoder、token/segment/position embedding、MLM、NSP、BERTModel。
+
+- [14.9–14.10 BERT 数据与预训练](<content/14. NLP预训练/9. 预训练BERT.md>)
+
+  关键词：WikiText-2、MLM 数据、NSP 数据、有效长度、预测位置、损失函数、小型 BERT、训练、句子编码。
+
+### 第 15 章：NLP 应用
+
+- [15.1–15.3 情感分析](<content/15. NLP微调/1. 情感分析.md>)
+
+  关键词：IMDb、tokenize、词表、截断、padding、DataLoader、GloVe、BiLSTM、TextCNN、二分类、迁移学习。

@@ -28,19 +28,31 @@ h6 {
 .page > #quartz-body {
   .center {
     width: 100%;
-    max-width: 800px;
+    max-width: 880px;
     min-width: 0;
   }
 
   .sidebar.right {
     display: none;
   }
+
+  @media all and ($desktop) {
+    grid-template-columns: 280px minmax(0, 880px);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "grid-sidebar-left grid-header"
+      "grid-sidebar-left grid-center"
+      "grid-sidebar-left grid-footer";
+    column-gap: 4rem;
+    justify-content: center;
+  }
 }
 
 article {
   p,
   li {
-    line-height: 1.76;
+    color: #374151;
+    line-height: 1.75;
   }
 
   > h1 {
@@ -55,9 +67,9 @@ article {
 
   h2 {
     margin-top: 2.25rem;
-    font-size: 1.45rem;
-    font-weight: 600;
-    line-height: 1.4;
+    font-size: 1.32rem;
+    font-weight: 550;
+    line-height: 1.45;
   }
 
   h3 {
@@ -95,5 +107,29 @@ article {
     p {
       margin: 0;
     }
+  }
+}
+
+.page > #quartz-body footer {
+  display: flex;
+  width: 100%;
+  max-width: 880px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #6b7280;
+  font-size: 0.82rem;
+  white-space: nowrap;
+
+  p,
+  ul {
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+    gap: 0.9rem;
+    list-style: none;
   }
 }

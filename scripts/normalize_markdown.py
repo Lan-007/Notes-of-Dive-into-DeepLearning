@@ -16,7 +16,7 @@ ZERO_WIDTH = re.compile("[\u200b\u200c\u200d\ufeff]")
 
 def title_for(path: Path) -> str:
     title = path.stem.strip()
-    return re.sub(r"^\d+(?:\.\d+)*[.、]?\s*", "", title) or title
+    return re.sub(r"^\d+(?:\.\d+)*[.銆乚?\s*", "", title) or title
 
 
 def split_display_math(text: str) -> str:
@@ -144,24 +144,21 @@ def normalize_readme() -> None:
     )
 
     if not text.lstrip().startswith("# "):
-        header = """# 动手学深度学习笔记
+        header = """# 鍔ㄦ墜瀛︽繁搴﹀涔犵瑪璁?
+[![鍦ㄧ嚎闃呰](https://img.shields.io/badge/鍦ㄧ嚎闃呰-Quartz-2563eb?style=for-the-badge&logo=github)](https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)
+[![Markdown 閾炬帴妫€鏌(https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml/badge.svg)](https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml)
 
-[![在线阅读](https://img.shields.io/badge/在线阅读-Quartz-2563eb?style=for-the-badge&logo=github)](https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)
-[![Markdown 链接检查](https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml/badge.svg)](https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning/actions/workflows/markdown-links.yml)
-
-基于 PyTorch 的《动手学深度学习》学习笔记，涵盖基础知识、神经网络训练、注意力机制、Transformer 与 NLP 预训练应用。
-
+鍩轰簬 PyTorch 鐨勩€婂姩鎵嬪娣卞害瀛︿範銆嬪涔犵瑪璁帮紝娑电洊鍩虹鐭ヨ瘑銆佺缁忕綉缁滆缁冦€佹敞鎰忓姏鏈哄埗銆乀ransformer 涓?NLP 棰勮缁冨簲鐢ㄣ€?
 > [!TIP]
-> 推荐访问 **[在线阅读版](https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)**，可使用全文搜索、章节目录、公式渲染和深色模式。
-
-## 学习路线
+> 鎺ㄨ崘璁块棶 **[鍦ㄧ嚎闃呰鐗圿(https://lan-007.github.io/Notes-of-Dive-into-DeepLearning/)**锛屽彲浣跨敤鍏ㄦ枃鎼滅储銆佺珷鑺傜洰褰曘€佸叕寮忔覆鏌撳拰娣辫壊妯″紡銆?
+## 瀛︿範璺嚎
 
 """
         text = header + text.lstrip()
 
     text = text.replace(
-        "NLP预训练NLP应用",
-        "NLP 预训练 → NLP 应用",
+        "NLP棰勮缁僋LP搴旂敤",
+        "NLP 棰勮缁?鈫?NLP 搴旂敤",
     )
     text = "\n".join(line.rstrip() for line in text.splitlines())
     text = re.sub(r"(?<!\n)\n(#{2,6}\s)", r"\n\n\1", text)
@@ -178,3 +175,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

@@ -1,7 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 动手学深度学习笔记
-  pageTitleSuffix: " · Lan-007"
+  pageTitle: 鍔ㄦ墜瀛︽繁搴﹀涔犵瑪璁?  pageTitleSuffix: " 路 Lan-007"
   enableSPA: true
   enablePopovers: true
   analytics: null
@@ -202,7 +201,7 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub 仓库: https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning
+        GitHub 浠撳簱: https://github.com/Lan-007/Notes-of-Dive-into-DeepLearning
     layout:
       position: footer
       priority: 50
@@ -280,3 +279,4 @@ layout:
         right: []
     canvas: {}
     bases: {}
+
